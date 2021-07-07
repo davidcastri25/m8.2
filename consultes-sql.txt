@@ -62,3 +62,16 @@ GROUP BY
 	flights.colMonth
 ORDER BY total_cancelled DESC;
 --------------------------------------------------------------------------------------------------------
+
+Exercici 6:
+
+SELECT 
+	flights.TailNum,
+	SUM(flights.Distance) AS totalDistance
+FROM flights
+WHERE flights.TailNum IS NOT NULL
+GROUP BY flights.TailNum
+ORDER BY totalDistance DESC
+LIMIT 10;
+--------------------------------------------------------------------------------------------------------
+
