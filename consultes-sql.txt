@@ -28,3 +28,24 @@ ORDER BY
 	colYear ASC,
 	colMonth ASC;
 --------------------------------------------------------------------------------------------------------
+
+Exercici 4:
+
+SELECT 
+	usairports.City, 
+	flights.colYear, 
+	flights.colMonth, 
+AVG(flights.ArrDelay) AS prom_arribades
+FROM usairports
+LEFT JOIN flights
+ON flights.Origin = usairports.IATA
+WHERE flights.colYear IS NOT NULL
+GROUP BY usairports.City, flights.colYear, flights.colMonth
+ORDER BY
+	City ASC,
+	colYear ASC,
+	colMonth ASC;
+--------------------------------------------------------------------------------------------------------
+
+Exercici 5:
+
