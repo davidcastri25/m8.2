@@ -75,3 +75,12 @@ ORDER BY totalDistance DESC
 LIMIT 10;
 --------------------------------------------------------------------------------------------------------
 
+Exercici 7:
+
+SELECT
+	flights.UniqueCarrier,
+	AVG(flights.ArrDelay) as avgDelay
+FROM flights
+GROUP BY flights.UniqueCarrier
+HAVING avgDelay > 10
+ORDER BY avgDelay DESC;
