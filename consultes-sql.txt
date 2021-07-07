@@ -1,0 +1,13 @@
+
+Exercici 1:
+SELECT COUNT(*) AS total FROM flights; 
+--------------------------------------------------------------------------------------------------------
+
+Exercici 2:
+SELECT 
+	flights.Origin,
+	AVG(flights.ArrDelay) AS prom_arribades, 
+	AVG(flights.DepDelay) AS prom_sortides
+FROM flights
+GROUP BY Origin;
+--------------------------------------------------------------------------------------------------------
